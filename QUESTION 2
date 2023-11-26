@@ -1,0 +1,10 @@
+def count_frequencies(numbers):
+    frequency_dict = {}
+    for num in numbers:
+        frequency_dict[num] = frequency_dict.get(num, 0) + 1
+    return frequency_dict
+numbers_list = [1, 2, 3, 1, 2, 4, 5, 1, 2, 6, 7, 8, 8, 7, 6]
+result_dict = count_frequencies(numbers_list)
+print("Number frequencies:")
+for num, freq in result_dict.items():
+    print(f"{num}: {freq} times")
